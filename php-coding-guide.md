@@ -1,4 +1,5 @@
 # PHP Coding Guide
+
 **Created: December 18, 2024**
 
 ---
@@ -6,6 +7,7 @@
 ## 📧 Email Headers in PHP
 
 ### Setting Email Headers
+
 ```php
 <?php
 // Basic email headers
@@ -27,6 +29,7 @@ mail($to, $subject, $message, $headers_string);
 ```
 
 ### Advanced Email Headers
+
 ```php
 <?php
 // Additional security and formatting headers
@@ -49,6 +52,7 @@ $headers[] = 'Content-Transfer-Encoding: 8bit';
 ## 🔍 Email Filtering
 
 ### Basic Email Validation
+
 ```php
 <?php
 function validateEmail($email) {
@@ -84,6 +88,7 @@ if (validateEmail($email)) {
 ```
 
 ### Advanced Email Filtering
+
 ```php
 <?php
 class EmailFilter {
@@ -147,6 +152,7 @@ if ($filter->isAllowed($email)) {
 ### Three Key Considerations for Creating a Search Bar
 
 #### 1. **User Experience (UX)**
+
 ```php
 <?php
 // Search bar with autocomplete
@@ -172,6 +178,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 ```
 
 #### 2. **Security & Input Validation**
+
 ```php
 <?php
 function sanitizeSearchInput($input) {
@@ -213,6 +220,7 @@ function validateSearchQuery($query) {
 ```
 
 #### 3. **Performance & Database Optimization**
+
 ```php
 <?php
 class SearchEngine {
@@ -281,7 +289,8 @@ class SearchEngine {
 
 ### Creating and Saving File Objects
 
-#### Step-by-Step Process:
+#### Step-by-Step Process
+
 ```php
 <?php
 class FileManager {
@@ -418,6 +427,7 @@ if ($result['success']) {
 ## 📅 Date Handling in PHP
 
 ### Today's Date Functions
+
 ```php
 <?php
 // Get today's date in various formats
@@ -447,6 +457,7 @@ $todayEST = $dateTime->format('Y-m-d H:i:s');
 ## 🛡️ Security Best Practices
 
 ### Input Sanitization
+
 ```php
 <?php
 function sanitizeInput($input) {
@@ -481,6 +492,7 @@ function validateCSRFToken($token) {
 ## 📊 Database Operations
 
 ### Prepared Statements
+
 ```php
 <?php
 class DatabaseManager {
