@@ -147,4 +147,29 @@ function fizzBuzzFizzBuzz(arrayOfNumber, nameTheyWant) {
 
 fizzBuzzFizzBuzz(numsArray, nameTheyWant);
 
+
+//updated dry version
+function fizzBuzzFizzBuzz(arrayOfNumber, nameTheyWant) {
+  const rules = [
+    [3, "fizz"],
+    [5, "buzz"],
+    [7, "POP"],
+  ];
+
+  arrayOfNumber.forEach(num => {
+    let output = rules
+      .filter(([div]) => num % div === 0)
+      .map(([, word]) => word)
+      .join("");
+
+    // special case: all three divisors
+    if (num % 3 === 0 && num % 5 === 0 && num % 7 === 0) {
+      output = nameTheyWant || "Craig Barkley";
+    }
+
+    console.log(output || num);
+  });
+}
+
+
 module.exports = app;
